@@ -70,6 +70,12 @@ emacs:
 --eval "(evil-mode 1)" \
 --eval "(evil-tests-initialize '(${TAG}) '(${PROFILER}) t)"
 
+emacs-repro:
+	$(EMACS) -Q -L . $(LIBS) -l goto-chg.el -l evil-tests.el \
+--eval "(setq evil-want-integration t evil-want-keybinding nil evil-want-C-u-scroll t)" \
+--eval "(evil-mode 1)" \
+--eval "(evil-tests-initialize '(${TAG}) '(${PROFILER}) t)"
+
 # Load Evil in a terminal Emacs and run all tests.
 term: terminal
 terminal:
