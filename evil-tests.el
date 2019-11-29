@@ -80,12 +80,7 @@
   (interactive '(nil t))
   (cond
    (interactive
-    (ert-run-tests-interactively "t")
-    (when evil-tests-profiler
-      (elp-results)))
-   (evil-tests-profiler
-    (ert-run-tests-batch tests)
-    (elp-results))
+    (ert-run-tests-interactively "t"))
    (t
     ;; We would like to use `ert-run-tests-batch-and-exit'
     ;; Unfortunately it doesn't work outside of batch mode, and we
