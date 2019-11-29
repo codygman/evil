@@ -79,8 +79,6 @@
   "Run Evil tests."
   (interactive '(nil t))
   (cond
-   (interactive
-    (ert-run-tests-interactively "t"))
    (t
     ;; We would like to use `ert-run-tests-batch-and-exit'
     ;; Unfortunately it doesn't work outside of batch mode, and we
