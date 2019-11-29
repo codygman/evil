@@ -16,7 +16,7 @@ install:
 
 script:
   - emacs --version
-  - make test
+  - sh runtests.sh
 
 after_script:
   - cat test-results.txt
