@@ -55,7 +55,7 @@ clean:
 #       make test TAG=repeat
 # This will only run tests pertaining to the repeat system.
 test:
-	$(EMACS) -nw -Q -L . $(LIBS) -l evil-tests.el \
+	emacs -nw -Q -L . -L lib  -l evil-tests.el \
 --eval "(evil-tests-run)"
 
 # Byte-compile Evil and run all tests.
