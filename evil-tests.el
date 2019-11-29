@@ -109,7 +109,7 @@ with `M-x evil-tests-run'"))
                              tests))))
     (cond
      (interactive
-      (ert-run-tests-interactively tests)
+      (ert-run-tests-interactively "t")
       (when evil-tests-profiler
         (elp-results)))
      (evil-tests-profiler
