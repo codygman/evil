@@ -4,8 +4,6 @@ os:
   - linux
 
 env:
-  - EMACS_CI=emacs-24-5
-  - EMACS_CI=emacs-25-3
   - EMACS_CI=emacs-26-3
   - EMACS_CI=emacs-snapshot
 
@@ -18,7 +16,7 @@ install:
 
 script:
   - emacs --version
-  - script -eqc 'make test' > /dev/null
+  - make test
 
 after_script:
   - cat test-results.txt
